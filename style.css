@@ -197,13 +197,15 @@ h1 {
 }
 
 .strength-fill {
-    width: 45%;
+    width: 20%;
 
     height: 100%;
 
-    background: #d8a657;
+    background: #d67b7b;
 
     border-radius: 20px;
+
+    transition: 0.3s;
 }
 
 .strength-text {
