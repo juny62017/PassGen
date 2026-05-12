@@ -7,7 +7,13 @@
 
 body {
     min-height: 100vh;
-    background: #f4f1ea;
+
+    background:
+        linear-gradient(
+            to bottom right,
+            #f5f1ea,
+            #ece5db
+        );
 
     display: flex;
     align-items: center;
@@ -18,31 +24,210 @@ body {
 
 .main-box {
     width: 100%;
-    max-width: 500px;
+    max-width: 520px;
 
-    background: white;
+    background: rgba(255, 255, 255, 0.95);
 
-    padding: 30px;
+    padding: 34px;
 
-    border-radius: 28px;
+    border-radius: 30px;
 
     box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.08);
+        0 10px 30px rgba(0, 0, 0, 0.06);
+
+    border:
+        1px solid rgba(0, 0, 0, 0.03);
 }
 
 .top-section {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 32px;
 }
 
 h1 {
-    font-size: 42px;
+    font-size: 44px;
     color: #3d352f;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+
+    letter-spacing: -1px;
 }
 
 .main-text {
     color: #7b726b;
     font-size: 15px;
-    line-height: 24px;
+    line-height: 25px;
+}
+
+.section-label {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #4b443e;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.password-section,
+.options-section,
+.strength-section {
+    margin-bottom: 26px;
+}
+
+.password-box {
+    display: flex;
+    gap: 12px;
+}
+
+#passwordOutput,
+#strengthInput {
+    flex: 1;
+
+    padding: 15px;
+
+    border: 1px solid #ddd5ca;
+
+    border-radius: 14px;
+
+    background: #faf8f4;
+
+    outline: none;
+
+    font-size: 14px;
+
+    color: #3d352f;
+}
+
+#passwordOutput:focus,
+#strengthInput:focus {
+
+    border-color: #c8b6a6;
+
+    background: white;
+}
+
+.copy-btn,
+.generate-btn {
+    border: none;
+
+    border-radius: 14px;
+
+    background: #c8b6a6;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.copy-btn {
+    padding: 0 18px;
+}
+
+.generate-btn {
+    width: 100%;
+
+    padding: 16px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+}
+
+.copy-btn:hover,
+.generate-btn:hover {
+
+    background: #b39f8d;
+
+    transform: translateY(-1px);
+}
+
+#lengthSlider {
+    width: 100%;
+
+    margin-bottom: 12px;
+
+    accent-color: #c8b6a6;
+}
+
+.length-text {
+    color: #6d655e;
+
+    font-size: 14px;
+
+    margin-bottom: 18px;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.option-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #4b443e;
+
+    font-size: 14px;
+}
+
+.option-item input {
+    accent-color: #c8b6a6;
+}
+
+.strength-bar {
+    width: 100%;
+
+    height: 10px;
+
+    background: #ebe4da;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    margin-top: 16px;
+    margin-bottom: 14px;
+}
+
+.strength-fill {
+    width: 45%;
+
+    height: 100%;
+
+    background: #d8a657;
+
+    border-radius: 20px;
+}
+
+.strength-text {
+    color: #6d655e;
+
+    font-size: 14px;
+}
+
+@media (max-width: 550px) {
+
+    .main-box {
+        padding: 24px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .password-box {
+        flex-direction: column;
+    }
+
+    .copy-btn {
+        padding: 14px;
+    }
+
 }
