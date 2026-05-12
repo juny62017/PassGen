@@ -98,6 +98,14 @@ h1 {
     font-size: 14px;
 
     color: #3d352f;
+
+    transition: 0.2s;
+}
+
+#passwordOutput:hover,
+#strengthInput:hover {
+
+    background: white;
 }
 
 #passwordOutput:focus,
@@ -135,6 +143,8 @@ h1 {
     font-size: 15px;
 
     font-weight: bold;
+
+    margin-top: 8px;
 }
 
 .copy-btn:hover,
@@ -212,6 +222,16 @@ h1 {
     color: #6d655e;
 
     font-size: 14px;
+}
+
+.copy-message {
+    margin-top: 12px;
+
+    color: #7da67d;
+
+    font-size: 13px;
+
+    display: none;
 }
 
 @media (max-width: 550px) {

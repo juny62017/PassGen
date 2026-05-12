@@ -4,6 +4,12 @@ let passwordOutput =
 let generateBtn =
     document.querySelector(".generate-btn");
 
+let copyBtn =
+    document.querySelector(".copy-btn");
+
+let copyMessage =
+    document.querySelector(".copy-message");
+
 let lengthSlider =
     document.getElementById("lengthSlider");
 
@@ -176,5 +182,27 @@ strengthInput.oninput = function () {
             "Strength: Strong";
 
     }
+
+};
+
+copyBtn.onclick = function () {
+
+    if (passwordOutput.value === "") {
+        return;
+    }
+
+    navigator.clipboard.writeText(
+        passwordOutput.value
+    );
+
+    copyMessage.style.display =
+        "block";
+
+    setTimeout(function () {
+
+        copyMessage.style.display =
+            "none";
+
+    }, 2000);
 
 };
